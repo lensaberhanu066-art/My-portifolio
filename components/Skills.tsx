@@ -5,14 +5,12 @@ import { useState } from "react";
 const skills = [
 	{ name: "HTML", level: 95 },
 	{ name: "CSS", level: 95 },
-	{ name: "JavaScript", level: 90 },
-	{ name: "React", level: 85 },
-	{ name: "Next.js", level: 80 },
-	{ name: "TypeScript", level: 80 },
-	{ name: "Tailwind CSS", level: 90 },
-	{ name: "Node.js", level: 70 },
-	{ name: "Python", level: 65 },
-	{ name: "GraphQL", level: 65 },
+	{ name: "JavaScript", level: 45 },
+	{ name: "React", level: 20 },
+	{ name: "Next.js", level: 15 },
+	{ name: "TypeScript", level: 20 },
+	{ name: "Tailwind CSS", level: 35},	
+	{ name: "Python", level: 25 },
 ];
 
 export default function Skills() {
