@@ -28,18 +28,17 @@ export default function Navbar() {
 
 	return (
 		<header
-			className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
-				scrolled
-					? "border-border bg-background/90 shadow-lg shadow-primary/5 backdrop-blur-md"
-					: "border-transparent bg-transparent"
+			className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${scrolled
+				? "border-border/50 bg-background/95 shadow-2xl shadow-primary/10 backdrop-blur-xl"
+				: "border-transparent bg-transparent"
 			}`}
 		>
-			<div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+			<div className="mx-auto flex max-w-5xl items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
 				<Link
 					href="/"
-					className="text-xl font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
+					className="text-lg sm:text-xl font-bold tracking-tight text-foreground transition-all duration-300 hover:text-primary hover:scale-110"
 				>
-					Leni<span className="text-primary">.</span>
+					Lensa<span className="text-primary animate-pulse">.</span>
 				</Link>
 
 				<nav className="hidden sm:block">
@@ -50,10 +49,10 @@ export default function Navbar() {
 								<li key={href}>
 									<Link
 										href={href}
-										className={`rounded-md px-3 py-2 transition-colors ${
+										className={`font-semibold rounded-lg px-3 py-2 transition-all duration-300 ${
 											active
-												? "bg-primary/10 text-accent"
-												: "text-muted hover:bg-card hover:text-foreground"
+												? "bg-primary/20 text-accent shadow-lg shadow-primary/20"
+												: "text-muted hover:bg-primary/10 hover:text-foreground hover:shadow-md hover:shadow-primary/10"
 										}`}
 									>
 										{label}
@@ -66,7 +65,7 @@ export default function Navbar() {
 
 				<button
 					type="button"
-					className="flex h-10 w-10 items-center justify-center rounded-md border border-border text-muted transition-colors hover:border-accent hover:text-foreground sm:hidden"
+					className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-border text-muted transition-all duration-300 hover:border-primary hover:text-foreground hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/20 sm:hidden"
 					onClick={() => setOpen((v) => !v)}
 					aria-expanded={open}
 					aria-label="Toggle menu"
@@ -82,16 +81,16 @@ export default function Navbar() {
 			</div>
 
 			{open && (
-				<nav className="border-t border-border bg-card/95 px-6 py-4 sm:hidden">
-					<ul className="flex flex-col gap-1 text-sm">
+				<nav className="border-t border-border/50 bg-card/95 backdrop-blur-md px-4 sm:px-6 py-4 sm:hidden">
+					<ul className="flex flex-col gap-2 text-sm">
 						{links.map(({ href, label }) => {
 							const active = pathname === href;
 							return (
 								<li key={href}>
 									<Link
 										href={href}
-										className={`block rounded-md px-3 py-2 transition-colors ${
-											active ? "bg-primary/10 text-accent" : "text-muted hover:text-foreground"
+										className={`block rounded-lg px-3 py-2 font-medium transition-all duration-300 ${
+											active ? "bg-primary/20 text-accent shadow-md shadow-primary/20" : "text-muted hover:bg-primary/10 hover:text-foreground hover:shadow-md hover:shadow-primary/10"
 										}`}
 									>
 										{label}

@@ -7,15 +7,11 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Project Alpha",
+    title: "MindDock",
     description: "A modern web app built with Next.js and TypeScript.",
     tags: ["Next.js", "TypeScript"],
   },
-  {
-    title: "Project Beta",
-    description: "Design-focused marketing site with great UX.",
-    tags: ["React", "Tailwind"],
-  },
+ 
 ];
 
 export default function Home() {
